@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/wangrz/dp/devel -DCMAKE_INSTALL_PREFIX=/home/wangrz/dp/install -G Unix Makefiles
