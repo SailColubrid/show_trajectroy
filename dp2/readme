@@ -1,0 +1,25 @@
+1. Download the serial lib of ros
+
+  $ sudo apt-get update
+  $ sudo apt-get install ros-indigo-serial
+  $ sudo rosdep update
+
+2. Open trajector drawer
+
+  $ cd /catkin_ws
+  $ catkin_make
+  $ source devel/setup.bash
+  $ roslaunch dp show_trajactory.launch
+
+3. Read from the serial port
+
+  $ cd /catkin_ws
+  $ source devel/setup.bash
+  $ rosrun dp serial_port.cpp
+
+
+Published topic:
+/info/trajectory   发布原始位置信息
+/line    发布轨迹信息
+/read    发布读取到的串口数据
+/trajectory  发布轨迹和姿态信息

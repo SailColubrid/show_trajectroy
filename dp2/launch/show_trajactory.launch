@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="dp" pkg="dp" type="dp.py" >
+      <remap from="read" to="read" />
+      <remap from="/info/trajectory" to="/info/trajectory" />
+    </node>
+
+    <node name="showpath" pkg="dp" type="showpath.py" >
+      <remap from="trajectory" to="trajectory" />
+      <remap from="line" to="line" />
+      <remap from="/info/trajectory" to="/info/trajectory" />
+      <remap from="odom" to="odom" />
+    </node>
+
+    <node name="rviz" pkg="rviz" type="rviz" required="true"/>
+</launch>
